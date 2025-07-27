@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Meson: Run (Debug)",
+            "type": "shell",
+            "command": "fish",
+            "args": [
+                "-c",
+                "meson compile -C build/debug -v && ./build/debug/game"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": true,
+                "panel": "shared",
+                "close": true
+            }
+        },
+        {
+            "label": "Meson: Compile (Debug)",
+            "type": "shell",
+            "command": "meson",
+            "args": [
+                "compile",
+                "-C",
+                "build/debug"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": true,
+                "panel": "new"
+            }
+        }
+    ]
+}

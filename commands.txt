@@ -1,0 +1,3 @@
+meson setup build/release-windows --buildtype release --cross-file cross-windows.txt -Ddefault_library=static
+meson setup build/release --buildtype release
+meson setup build/debug --buildtype debug
