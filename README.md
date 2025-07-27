@@ -42,12 +42,12 @@ Choose one of the build setups and build the project:
 
 ```
 meson setup build/release --buildtype release
-meson -C compile build/release
+meson compile -C build/release
 ```
 or
 ```
 meson setup build/debug --buildtype debug
-meson -C compile build/debug
+meson compile -C build/debug -v
 ```
 
 > 🪟 **Windows building support is coming soon!**
