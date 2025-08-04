@@ -2,7 +2,7 @@ project(
   'game',
   'cpp',
   version: '0.1',
-  meson_version: '1.8.2',
+  meson_version: '1.8.3',
   default_options: ['cpp_std=c++23'],
 )
 
