@@ -55,7 +55,7 @@ int main()
 {
     InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
     SetExitKey(KEY_Q);
-    SetTargetFPS(60);
+    SetTargetFPS(100);
     srand(static_cast<unsigned int>(time(nullptr)));
 
     // Interaction matrix rule[target][source]
@@ -67,7 +67,7 @@ int main()
     }};
 
     std::vector<Particle> particles;
-    particles.reserve(3000);
+    particles.reserve(2000);
 
     auto spawn = [&](int count, PType t)
     {
@@ -116,8 +116,7 @@ int main()
 
                 if (distSq > minDistSq && distSq < maxDistSq)
                 {
-                    float dist = sqrtf(distSq);
-                    float g = rule[ti][tj] / dist;
+                    float g = rule[ti][tj] / (distSq + 1.0f);
 
                     f.x += g * d.x;
                     f.y += g * d.y;
@@ -168,11 +167,11 @@ int main()
             DrawCircleV(Vector2{p.pos.x, p.pos.y}, bounceRadius, TYPE_COLOR[static_cast<int>(p.type)]);
 
         // GUI: Sliders in a single long column, good spacing
-        int sliderWidth = 300;
-        int sliderHeight = 20;
-        int startX = WINDOW_WIDTH - sliderWidth - 20; // right-aligned
-        int startY = 10;
-        int rowSpacing = sliderHeight + 25; // vertical spacing between sliders
+        int sliderWidth = 150;
+        int sliderHeight = 10;
+        int startX = WINDOW_WIDTH - sliderWidth - 50; // right-aligned
+        int startY = 20;
+        int rowSpacing = sliderHeight + 20; // vertical spacing between sliders
 
         GuiSetStyle(SLIDER, BORDER_COLOR_NORMAL, 0x550000FF); // Dark red border (RGBA)
         GuiSetStyle(SLIDER, BASE_COLOR_NORMAL, 0xFFFF55FF);   // Bright yellow base (RGBA)
