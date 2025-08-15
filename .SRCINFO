@@ -1,6 +1,6 @@
 pkgbase = particle-lifesim
 	pkgdesc = A particle-based artificial life simulation, implemented with raylib and C++
-	pkgver = 0.1.1
+	pkgver = 0.1.4
 	pkgrel = 1
 	url = https://github.com/annyman/particle-lifesim
 	arch = x86_64
@@ -9,8 +9,7 @@ pkgbase = particle-lifesim
 	makedepends = ninja
 	makedepends = gcc
 	depends = raylib
-	depends = raygui
-	source = https://github.com/annyman/particle-lifesim/archive/refs/tags/gui.tar.gz
-	sha256sums = da6307293714273ccf0cd0fb05c735b777e39a02d46b711d08ccf9d265dcc7d2
+	source = https://github.com/annyman/particle-lifesim/archive/refs/tags/v0.1.4.tar.gz
+	sha256sums = 0845044edf07fba45b0d71c69127630d03ece09e23396beb303a99aa19625ab9
 
 pkgname = particle-lifesim
