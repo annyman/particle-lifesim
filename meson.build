@@ -1,5 +1,5 @@
 project(
-  'game',
+  'particle-lifesim',
   'cpp',
   version: '0.1',
   meson_version: '1.8.3',
@@ -52,11 +52,12 @@ else
 endif
 
 executable(
-  'game',
+  'particle-lifesim',
   src_files,
   include_directories: inc,
   dependencies: [raylib_dep],
   link_args: link_args,
   win_subsystem: 'windows',
-  install: false
+  install: true,
+  install_dir: 'bin'
 )
