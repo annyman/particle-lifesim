@@ -7,7 +7,7 @@
             "command": "fish",
             "args": [
                 "-c",
-                "meson compile -C build/debug -v && ./build/debug/game"
+                "meson compile -C build/debug -v && ./build/debug/particle-lifesim"
             ],
             "group": {
                 "kind": "build",

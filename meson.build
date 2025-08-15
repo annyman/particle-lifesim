@@ -41,10 +41,8 @@ elif buildtype == 'release' and is_windows
   src_files += icon_res
 
 elif buildtype == 'release'
-  # Static link from lib/raylib for release (Linux)
-
-  raylib_dir = meson.current_source_dir() / 'lib' / 'raylib'
-  raylib_dep = cpp.find_library('raylib', dirs: [raylib_dir], required: true, static: true)
+  # Linux release uses system-provided raylib
+  raylib_dep = dependency('raylib', required: true)
   link_args = ['-static', '-static-libgcc', '-static-libstdc++']
 
 else
