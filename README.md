@@ -25,7 +25,19 @@ This is a raylib-powered spin on Brainxyz’s JS original, built for education, 
 
 ---
 
-## 🛠️ Quick Build
+## 📩 Install
+
+Arch Linux:
+
+```
+git clone --branch packaging https://github.com/annyman/particle-lifesim.git
+cd particle-lifesim
+makepkg -si
+```
+
+---
+
+## 🛠️ Build it yourself
 
 Clone and build:
 
