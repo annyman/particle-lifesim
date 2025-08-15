@@ -3,10 +3,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
-#include "raylib.h"
+#include "raylib/raylib.h"
 
 #define RAYGUI_IMPLEMENTATION
-#include "raygui.h"
+#include "raylib/raygui.h"
 
 #include "conf.h"
 
