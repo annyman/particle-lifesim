@@ -1,6 +1,6 @@
 # Maintainer: annyman <annyman.81194@protonmail.com>
 pkgname=particle-lifesim
-pkgver=0.1.4
+pkgver=0.1.5
 pkgrel=1
 pkgdesc="A particle-based artificial life simulation, implemented with raylib and C++"
 arch=('x86_64')
@@ -9,7 +9,7 @@ license=('MIT')
 makedepends=('meson' 'ninja' 'gcc')
 depends=('raylib')
 source=("$url/archive/refs/tags/v${pkgver}.tar.gz")
-sha256sums=('0845044edf07fba45b0d71c69127630d03ece09e23396beb303a99aa19625ab9')
+sha256sums=('d83675f10e3117ed573dc53e93c100c07bdc9dfaf370601c1b2d1aa57a9d9338')
 
 build() {
     cd "${pkgname}-${pkgver}"
